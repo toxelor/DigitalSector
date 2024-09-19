@@ -12,14 +12,11 @@ const clock = () => {
     image = document.querySelector('#image')
     document.querySelector('#time').innerHTML = hours + ':' + minutes + ':' + seconds
     document.querySelector('#date').innerHTML = day + ' ' + month + ', ' + dayNum
-    const getTime = (hours) => {
-        return new Date(`${date.getFullYear()}-${addZero(date.getMonth())}-${day}T${addZero(hours)}:00:00`)
-    }
-    if (getTime(0) >= date && getTime(6) < date) {
+    if (hours >= 0 && hours < 6) {
         image.src = 'media/01.jpg'
-    } else if (getTime(6) >= date && getTime(12) < date) {
+    } else if (hours >= 6 && hours < 12) {
         image.src = 'media/02.jpg'
-    } else if (getTime(12) >= date && getTime(18) < date) {
+    } else if (hours >= 12 && hours < 18) {
         image.src = 'media/03.jpg'
     } else {
         image.src = 'media/04.jpg'
