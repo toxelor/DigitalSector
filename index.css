@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    color: white;
+    overflow: hidden;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html {
+    font-size: 15px;
+}
+
+.wrapper {
+    padding: 20px 20px;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.header {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: end;
+}
+
+.forecast {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 2rem;
+}
+
+.city {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    font: 500 10.5rem -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.date {
+    font-size: 2.5rem;
+}
+
+.tasks {
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+
+#tasks {
+    cursor: pointer;
+}
+
+.weather_icon{
+    height: 26px;
+    border-radius: 30px;
+}
+
+.tasks-content-wrapper {
+    background-color: rgba(0, 0, 0, 0.548);
+    backdrop-filter: blur(10px);
+    width: 25vw;
+    max-height: 90vh;
+    position: absolute;
+    bottom: 5vh;
+    right: -1vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transform: scale(0);
+    transition: transform 200ms, top 500ms, right 500ms;
+}
+
+.tasks-content-wrapper.active {
+    transform: scale(1);
+    bottom: 5vh;
+    right: 0;
+}
+
+.tasks-content-deleteAll-div {
+    display: flex;
+    justify-content: end;
+}
+
+.tasks-content-deleteAll {
+    color: #ffffff;
+    background-color: #4c4c4c;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    padding: 5px 5px;
+}
+
+#input-form {
+    box-sizing: border-box;
+}
+
+#tasks-content-input {
+    width: 98%;
+    background-color: transparent;
+    border: none;
+    padding: 5px 5px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+#tasks-content-input::placeholder {
+    font-size: 1rem;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tasks-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 1rem;
+}
+
+.tasks-content::-webkit-scrollbar {
+    width: 0;
+}
+
+.checkbox-div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    max-width: 150%;
+    overflow: hidden;
+}
+
+.task span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+}
+
+.task button {
+    background-color: #4c4c4c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.finished {
+    opacity: 0.8;
+    text-decoration: line-through;
+}
+
+@media screen and (max-width: 820px) {
+    .tasks-content-wrapper.active {
+        bottom: 3vh;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 8px;
+    }
+
+    .tasks-content-wrapper {
+        width: 40vw;
+    }
+}

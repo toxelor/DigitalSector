@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="image-wrapper">
+        <img class="image" id="image" src="media/01.jpg">
+    </div>
+    <div class="wrapper">
+        <header class="header">
+            <div class="forecast">
+                <div class="weather" id="weather">
+                    <img class="weather_icon" id="weather_icon" src="" alt=""/>
+                </div>
+                <span class="temperature" id="temperature">
+                    22°
+                </span>
+            </div>
+            <div class="city" id="city">
+                Краснодар
+            </div>
+        </header>
+        <div class="clock">
+            <div class="time" id="time">
+                00:00:00
+            </div>
+            <div class="date" id="date">
+                09 сентября, понедельник
+            </div>
+        </div>
+        <div class="tasks">
+            <span id="tasks">Задачи</span>
+            <div id="tasks-content-wrapper" class="tasks-content-wrapper">
+                <div onclick="deleteAllFinished()" class="tasks-content-deleteAll-div">
+                    <button class="tasks-content-deleteAll">Удалить выполненное</button>
+                </div>
+                <div id="tasks-content" class="tasks-content">
+                    Пока нет задач
+                </div>
+                <form id="input-form">
+                    <input required="true" id="tasks-content-input" class="tasks-content-input" placeholder="Введите задачу" type="text">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="weather.js"></script>
+<script src="clock.js"></script>
+<script src="tasks.js"></script>
+</html>
