@@ -1,5 +1,5 @@
 if ("geolocation" in navigator){
-    navigator.geolocation.watchPosition((position) => {
+    navigator.geolocation.getCurrentPosition((position) => {
         forecastWithCoordinates(position.coords.latitude, position.coords.longitude);
     });
 } else {
