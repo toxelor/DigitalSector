@@ -18,9 +18,6 @@ const forecastWithCoordinates = (position) => {
         city = data.location.name
         temperature = data.current.temperature
         icon = data.current.weather_icons[0]
-    })
-    .then(() => {
-        console.log(city, temperature, icon)
         updateWeather(city, temperature, icon)
     })
 
@@ -40,9 +37,6 @@ const forecastStandart = () => {
         city = data.location.name
         temperature = data.current.temperature
         icon = data.current.weather_icons[0]
-    })
-    .then(() => {
-        console.log(city, temperature, icon)
         updateWeather(city, temperature, icon)
     })
 }
