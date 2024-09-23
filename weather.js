@@ -45,6 +45,7 @@ const forecastStandart = () => {
     })
     .then(() => {
         console.log(city, temperature, icon)
+        updateWeather(city, temperature, icon)
     })
 }
 
