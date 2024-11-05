@@ -27,7 +27,7 @@ const forecastStandart = () => {
     let city = ""
     let temperature = 0
     let icon = ""
-    fetch(`http://api.weatherstack.com/current?access_key=86ddd28ca1b30d2d2a18560f18dd53d8&query=Krasnodar`, {
+    fetch(`http://api.weatherstack.com/current?access_key=86ddd28ca1b30d2d2a18560f18dd53d8&query=Saint-Petersburg`, {
         referrerPolicy: "unsafe-url" 
     })
     .then((response) => {
